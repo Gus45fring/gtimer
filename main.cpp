@@ -21,8 +21,9 @@ double avg()
     } else
     {
         double average = sum/count;
-        return average;
+        
     }
+    return average;
 }
 
 int main() 
@@ -64,7 +65,8 @@ int main()
         BeginDrawing();
             ClearBackground(WHITE);
             DrawText(TextFormat("%03.03f", time), screenWidth/2, screenHeight/2, 40, BLACK);
-            DrawText(TextFormat("%03.03f", average), 0, screenHeight/2-50, 10, BLACK);
+            DrawText("average:"), 10, screenHeight/2-10, 40, BLACK);
+            DrawText(TextFormat("%03.03f", average), 10, screenHeight/2, 40, BLACK);
         EndDrawing();
     }
 
